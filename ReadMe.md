@@ -1,4 +1,6 @@
-﻿QTPriceChecker  
+Homework.
+
+QTPriceChecker  
 =============  
   
 Das Projekt ***QTPriceChecker*** ist eine Vorlage fuer die Erstellung von datenzentrierten Anwendungen. Ausgehend von dieser Vorlage koennen neue Anwendungen, sogenannte Domain-Projekte, erstellt und erweitert werden.  
