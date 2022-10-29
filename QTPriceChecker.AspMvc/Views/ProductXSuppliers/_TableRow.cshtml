@@ -1,0 +1,25 @@
+@*@GeneratedCode*@
+@model QTPriceChecker.AspMvc.Models.Base.ProductXSupplier
+
+<tr>
+ <td>
+  @Html.DisplayFor(model => model.SupplierId)
+ </td>
+ <td>
+  @Html.DisplayFor(model => model.ProductId)
+ </td>
+ <td>
+  @Html.DisplayFor(model => model.MinPrice)
+ </td>
+ <td>
+  @Html.DisplayFor(model => model.MaxPrice)
+ </td>
+ <td>
+  @Html.DisplayFor(model => model.CurrentPrice)
+ </td>
+ <td>
+  @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+  @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+  @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
+ </td>
+</tr>

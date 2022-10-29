@@ -1,0 +1,61 @@
+@*@CustomCode*@
+@model IEnumerable<QTPriceChecker.AspMvc.Models.Base.Product>
+@{
+    var orderBy = (string)ViewBag.OrderBy ?? string.Empty;
+}
+<thead>
+    <tr>
+        <th>
+            @if (orderBy.StartsWith("Number") && orderBy.EndsWith("ASC"))
+            {
+                <a asp-action="OrderBy" asp-route-orderBy="Number DESC" class="btn btn-outline"><strong>Number</strong> <i class="fa fa-sort-desc"></i></a>
+            }
+            else if (orderBy.StartsWith("Number") && orderBy.EndsWith("DESC"))
+            {
+                <a asp-action="OrderBy" asp-route-orderBy="" class="btn btn-outline"><strong>Number</strong> <i class="fa fa-sort-asc"></i></a>
+            }
+            else
+            {
+                <a asp-action="OrderBy" asp-route-orderBy="Number ASC" class="btn btn-outline"><strong>Number</strong></a>
+            }
+        </th>
+        <th>
+            @if (orderBy.StartsWith("Designation") && orderBy.EndsWith("ASC"))
+            {
+                <a asp-action="OrderBy" asp-route-orderBy="Designation DESC" class="btn btn-outline"><strong>Designation</strong> <i class="fa fa-sort-desc"></i></a>
+            }
+            else if (orderBy.StartsWith("Designation") && orderBy.EndsWith("DESC"))
+            {
+                <a asp-action="OrderBy" asp-route-orderBy="" class="btn btn-outline"><strong>Designation</strong> <i class="fa fa-sort-asc"></i></a>
+            }
+            else
+            {
+                <a asp-action="OrderBy" asp-route-orderBy="Designation ASC" class="btn btn-outline"><strong>Designation</strong></a>
+            }
+        </th>
+        <th>
+            <a class="btn btn-outline" href="#"><strong>Quantity</strong></a>
+        </th>
+        <th>
+            <a class="btn btn-outline" href="#"><strong>MinPrice</strong></a>
+        </th>
+        <th>
+            <a class="btn btn-outline" href="#"><strong>MaxPrice</strong></a>
+        </th>
+        <th>
+            @if (orderBy.StartsWith("State") && orderBy.EndsWith("ASC"))
+            {
+                <a asp-action="OrderBy" asp-route-orderBy="State DESC" class="btn btn-outline"><strong>State</strong> <i class="fa fa-sort-desc"></i></a>
+            }
+            else if (orderBy.StartsWith("State") && orderBy.EndsWith("DESC"))
+            {
+                <a asp-action="OrderBy" asp-route-orderBy="" class="btn btn-outline"><strong>State</strong> <i class="fa fa-sort-asc"></i></a>
+            }
+            else
+            {
+                <a asp-action="OrderBy" asp-route-orderBy="State ASC" class="btn btn-outline"><strong>State</strong></a>
+            }
+        </th>
+        <th></th>
+    </tr>
+</thead>
